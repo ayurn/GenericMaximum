@@ -1,5 +1,15 @@
 public class GenericMax {
 
+    //Refactor-1 Refactor all the 3 to One Generic Method and find the maximum
+    public <E extends Comparable> E genericMaximum(E firstPosition, E secondPosition, E thirdPosition){
+        E maxPosition=firstPosition;
+        if(secondPosition.compareTo(maxPosition) > 0)
+            maxPosition=secondPosition;
+        if(thirdPosition.compareTo(maxPosition) > 0)
+            maxPosition=thirdPosition;
+        return maxPosition;
+    }
+
     //uc1
     public Integer MaximumInteger(Integer firstValue, Integer secondValue, Integer thirdValue) {
         Integer maxInt = firstValue;

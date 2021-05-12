@@ -3,6 +3,31 @@ import org.junit.jupiter.api.Test;
 
 public class GenericMaxTest {
 
+    //Refactor-1 Refactor all the 3 to One Generic Method and find the maximum
+    // Integer
+    @Test
+    public void givenThreeIntegers_shouldReturnMaxPosition(){
+        GenericMax genericMax = new GenericMax();
+        Integer maxInteger = genericMax.MaximumInteger(9,5,2);
+        Assertions.assertEquals(Integer.valueOf(9),maxInteger);
+    }
+
+    //Float
+    @Test
+    public void givenThreeFloats_shouldReturnMaxPosition(){
+        GenericMax genericMax = new GenericMax();
+        Double maxDouble = genericMax.maxPositionDouble(2.5,2.6,2.1);
+        Assertions.assertEquals(Double.valueOf(2.6),maxDouble);
+    }
+
+    //String
+    @Test
+    public void givenThreeStrings_shouldReturnMaxPosition(){
+        GenericMax genericMax = new GenericMax();
+        String maxString = genericMax.maxPositionString("Pineapple", "Apple", "Banana");
+        Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
+    }
+
     @Test
     public void FirstNumMaxTest() {
         GenericMax genericMax = new GenericMax();
