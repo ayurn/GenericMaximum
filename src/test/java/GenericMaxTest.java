@@ -48,4 +48,27 @@ public class GenericMaxTest {
         Assertions.assertEquals(Double.valueOf(2.7),maxDouble);
     }
 
+    @Test
+    public void givenMaxStringAtFirstPosition_shouldReturnSame(){
+        GenericMax genericMax = new GenericMax();
+        String maxString = genericMax.maxPositionString("Pineapple", "Apple", "Banana");
+        Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
+    }
+
+    //TC--3.2
+    @Test
+    public void givenMaxStringAtSecondPosition_shouldReturnSame(){
+        GenericMax genericMax = new GenericMax();
+        String maxString = genericMax.maxPositionString("Apple", "Pineapple", "Banana");
+        Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
+    }
+
+    //TC--3.3
+    @Test
+    public void givenMaxStringAtThirdPosition_shouldReturnSame(){
+        GenericMax genericMax = new GenericMax();
+        String maxString = genericMax.maxPositionString("Apple", "Banana", "Pineapple");
+        Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
+    }
+
 }
