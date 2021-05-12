@@ -16,4 +16,11 @@ public class GenericMaxTest {
         Integer maxInteger = genericMax.MaximumIntiger(9,15,8);
         Assertions.assertEquals(Integer.valueOf(15),maxInteger);
     }
+
+    @Test
+    public void ThirdNumMaxTest() {
+        GenericMax genericMax = new GenericMax();
+        Integer maxInteger = genericMax.MaximumIntiger(9,15,21);
+        Assertions.assertEquals(Integer.valueOf(21),maxInteger);
+    }
 }
