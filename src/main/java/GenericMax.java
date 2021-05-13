@@ -1,33 +1,20 @@
-//Refactor-2 Refactor to create Generic Class to take in 3 variables of Generic Type
-public class GenericMax<E extends Comparable> {
 
-    E firstPosition;
-    E secondPosition;
-    E thirdPosition;
-    E fourthPosition;
-    E fifthPosition;
+public class GenericMax {
 
-    public GenericMax(E firstPosition, E secondPosition, E thirdPosition, E fourthPosition, E fifthPosition) {
-        this.firstPosition = firstPosition;
-        this.secondPosition = secondPosition;
-        this.thirdPosition = thirdPosition;
-        this.fourthPosition = fourthPosition;
-        this.fifthPosition = fifthPosition;
-    }
+    //UC-4 Extend the max method to take more than three parameters
+    public <E extends Comparable> E max(E[] inputArray) {
 
-    public E maximumGeneric(){
-        return genericMaximum(firstPosition, secondPosition, thirdPosition, fourthPosition, fifthPosition);
-    }
-    public <E extends Comparable> E genericMaximum(E firstPosition, E secondPosition, E thirdPosition, E fourthPosition, E fifthPosition){
-        E maxPosition = firstPosition;
-        if(secondPosition.compareTo(maxPosition) > 0)
-            maxPosition = secondPosition;
-        if(thirdPosition.compareTo(maxPosition) > 0)
-            maxPosition = thirdPosition;
-        if(fourthPosition.compareTo(maxPosition) > 0)
-            maxPosition = fourthPosition;
-        if(fifthPosition.compareTo(maxPosition) > 0)
-            maxPosition = fifthPosition;
+        for (int i = 0 ; i<(inputArray.length - 1 ); i ++) {
+            for ( int j = 0; j<(inputArray.length - 1); j++) {
+                if ( inputArray[j].compareTo(inputArray[j + 1]) < 0 ) {
+                    E temp = inputArray[j];
+                    inputArray[j] = inputArray[j + 1];
+                    inputArray[j+1] = temp;
+                }
+            }
+        }
+
+        E maxPosition = inputArray[0];
         return maxPosition;
     }
 }
