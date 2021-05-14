@@ -1,8 +1,12 @@
 
 public class GenericMax {
 
-    //UC-4 Extend the max method to take more than three parameters
     public <E extends Comparable> E max(E[] inputArray) {
+
+        for (E element: inputArray ) {
+            System.out.println(element);
+        }
+
 
         for (int i = 0 ; i<(inputArray.length - 1 ); i ++) {
             for ( int j = 0; j<(inputArray.length - 1); j++) {
@@ -16,5 +20,8 @@ public class GenericMax {
 
         E maxPosition = inputArray[0];
         return maxPosition;
+    }
+    public <E> void printmax(E maxPosition) {
+        System.out.println("Maximum value is = "+ maxPosition);
     }
 }

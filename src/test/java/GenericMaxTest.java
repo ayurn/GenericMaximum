@@ -10,6 +10,7 @@ public class GenericMaxTest {
         Integer[] intArray = {9, 5, 2, 3, 4};
         GenericMax genericMax = new GenericMax();
         Integer maxInt = (Integer) genericMax.max(intArray);
+        genericMax.printmax(maxInt);
         Assertions.assertEquals(Integer.valueOf(9),maxInt);
     }
 
@@ -19,6 +20,7 @@ public class GenericMaxTest {
         Double[] floatArray = {9.1, 5.2, 2.25, 3.63, 4.5};
         GenericMax genericMax = new GenericMax();
         Double maxFloat = (Double) genericMax.max(floatArray);
+        genericMax.printmax(maxFloat);
         Assertions.assertEquals(Double.valueOf(9.1),maxFloat);
     }
 
@@ -28,6 +30,7 @@ public class GenericMaxTest {
         String[] stringArray = {"Pineapple", "Apple", "Banana", "Ice", "An"};
         GenericMax genericMax = new GenericMax();
         String maxString = (String) genericMax.max(stringArray);
+        genericMax.printmax(maxString);
         Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
     }
     //refactor2
@@ -36,6 +39,7 @@ public class GenericMaxTest {
         Integer[] intArray = {9, 5, 2, 3, 4};
         GenericMax genericMax = new GenericMax();
         Integer maxInt = (Integer) genericMax.max(intArray);
+        genericMax.printmax(maxInt);
         Assertions.assertEquals(Integer.valueOf(9),maxInt);
     }
 
@@ -44,6 +48,7 @@ public class GenericMaxTest {
         Integer[] intArray = {5, 9, 2, 3, 4};
         GenericMax genericMax = new GenericMax();
         Integer maxInt = (Integer) genericMax.max(intArray);
+        genericMax.printmax(maxInt);
         Assertions.assertEquals(Integer.valueOf(9),maxInt);
     }
 
@@ -52,6 +57,7 @@ public class GenericMaxTest {
         Integer[] intArray = {9, 5, 12, 3, 4};
         GenericMax genericMax = new GenericMax();
         Integer maxInt = (Integer) genericMax.max(intArray);
+        genericMax.printmax(maxInt);
         Assertions.assertEquals(Integer.valueOf(12),maxInt);
     }
 
@@ -61,6 +67,7 @@ public class GenericMaxTest {
         Double[] floatArray = {9.1, 5.2, 2.25, 3.63, 4.5};
         GenericMax genericMax = new GenericMax();
         Double maxFloat = (Double) genericMax.max(floatArray);
+        genericMax.printmax(maxFloat);
         Assertions.assertEquals(Double.valueOf(9.1),maxFloat);
     }
 
@@ -70,6 +77,7 @@ public class GenericMaxTest {
         Double[] floatArray = {9.1, 51.2, 2.25, 3.63, 4.5};
         GenericMax genericMax = new GenericMax();
         Double maxFloat = (Double) genericMax.max(floatArray);
+        genericMax.printmax(maxFloat);
         Assertions.assertEquals(Double.valueOf(51.2),maxFloat);
     }
 
@@ -79,6 +87,7 @@ public class GenericMaxTest {
         Double[] floatArray = {9.1, 5.2, 27.25, 3.63, 4.5};
         GenericMax genericMax = new GenericMax();
         Double maxFloat = (Double) genericMax.max(floatArray);
+        genericMax.printmax(maxFloat);
         Assertions.assertEquals(Double.valueOf(27.25),maxFloat);
     }
     //TC--3.1
@@ -87,6 +96,7 @@ public class GenericMaxTest {
         String[] stringArray = {"Pineapple", "Apple", "Banana", "Ice", "An"};
         GenericMax genericMax = new GenericMax();
         String maxString = (String) genericMax.max(stringArray);
+        genericMax.printmax(maxString);
         Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
     }
 
@@ -96,6 +106,7 @@ public class GenericMaxTest {
         String[] stringArray = {"Apple", "Pineapple", "Banana", "Ice", "An"};
         GenericMax genericMax = new GenericMax();
         String maxString = (String) genericMax.max(stringArray);
+        genericMax.printmax(maxString);
         Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
     }
 
@@ -105,6 +116,7 @@ public class GenericMaxTest {
         String[] stringArray = {"Apple", "Banana", "Pineapple", "Ice", "An"};
         GenericMax genericMax = new GenericMax();
         String maxString = (String) genericMax.max(stringArray);
+        genericMax.printmax(maxString);
         Assertions.assertEquals(String.valueOf("Pineapple"),maxString);
     }
 
